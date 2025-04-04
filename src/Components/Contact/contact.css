@@ -1,0 +1,86 @@
+
+
+.contact-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    margin: 0 auto;
+}
+
+.contact-button .wp{
+    position: relative;
+    background-color: #1d1d1d;
+    color: #fff;
+    outline: none;
+    padding: 15px 45px;
+    border-radius: 5px;
+    z-index: 1;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.contact-button .wp::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-radius: 5px;
+    top: 0;
+    height: 100%;
+    transition: left 1s ease;
+    left: -100%;
+    z-index: -1;
+    background-color: rgb(0, 0, 0);
+}
+.contact-button .wp:hover::after{
+    left:0;
+
+}
+.contact-button .ph {
+    position: relative;
+    background-color: #1d1d1d;
+    color: #fff;
+    min-width: 150px;
+    outline: none;
+    padding: 15px 45px;
+    border-radius: 5px;
+    z-index: 1;
+    border: 1px solid #333;
+    cursor: pointer;
+    
+}
+
+.contact-button .ph::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%; /* sağdan başlasın */
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    z-index: -1;
+    transition: right 1s ease;
+
+}
+
+.contact-button .ph:hover::after {
+    right: 0;
+}
+
+
+@media screen and (max-width: 780px) {
+    .contact-button .wp::after,
+    .contact-button .ph::after {
+      content: none !important; /* after içeriğini tamamen kaldır */
+      display: none !important; /* görünmez yap */
+    }
+  
+    .contact-button .wp:hover::after,
+    .contact-button .ph:hover::after {
+      right: unset;
+      left: unset;
+    }
+  }
+  

@@ -1,0 +1,45 @@
+
+.tezbitti-logo img{
+    filter: brightness(0) invert(1); 
+    width: 150px;
+}
+.under-construction{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 35px;
+    row-gap: 30px;
+}
+
+.under-construction h2{
+    font-weight: 300;
+    font-size: 40px;
+    color: #727272;
+}
+
+.under-construction p{
+    color: #727272;
+    font-size: 20px;
+    text-align: justify;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25;
+}
+@media screen and (max-width: 780px) {
+    .tezbitti-logo img{
+        width: 100px;
+    } 
+    
+    .under-construction h2{
+        font-size: 35px;
+    }
+    .under-construction p{
+        font-size: 15px;
+    }
+}
